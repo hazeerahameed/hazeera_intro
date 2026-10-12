@@ -66,11 +66,14 @@ function initStickyHeader() {
     });
 
     navLinks.forEach(link => {
-      const href = link.getAttribute('href').substring(1);
-      if (href === currentSectionId) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const targetId = href.substring(1);
+        if (targetId === currentSectionId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
       }
     });
   };

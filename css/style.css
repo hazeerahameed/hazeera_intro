@@ -1533,6 +1533,219 @@ ul {
   }
 }
 
+/* --------------------------------------------------------------------------
+   ABOUT ME SECTION STYLES (IN-PAGE SECTION)
+   -------------------------------------------------------------------------- */
+.about-section {
+  background: radial-gradient(ellipse at 50% 35%, #0e372b 0%, #061913 75%);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: linear-gradient(145deg, rgba(16, 54, 43, 0.65) 0%, rgba(10, 36, 28, 0.85) 100%);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 16px;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  backdrop-filter: var(--glass-blur);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gold-gradient);
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.about-card:hover {
+  background: rgba(22, 74, 59, 0.8);
+  border-color: var(--gold-400);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.about-card:hover::before {
+  opacity: 1;
+}
+
+.about-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.about-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-card-number {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--gold-400);
+  text-transform: uppercase;
+}
+
+.about-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(197, 160, 89, 0.1);
+  border: 1px solid var(--border-gold-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-300);
+}
+
+.about-card-value {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.about-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.about-card-desc strong {
+  color: var(--gold-300);
+}
+
+.about-tag-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 15px;
+  color: var(--gold-300);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 0.8rem;
+}
+
+.about-link-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1.6rem;
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.35);
+}
+
+.btn-linkedin:hover {
+  background: linear-gradient(135deg, #0b75df 0%, #004d99 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(10, 102, 194, 0.5);
+  color: #ffffff;
+}
+
+.btn-site-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  background: rgba(197, 160, 89, 0.1);
+  border: 1px solid var(--gold-500);
+  color: var(--gold-300);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.btn-site-link:hover {
+  background: var(--gold-gradient);
+  color: var(--emerald-950);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-gold);
+}
+
+.about-bottom-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.footer-link {
+  color: var(--gold-400);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: var(--gold-300);
+}
+
+@media (max-width: 868px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-card {
+    padding: 2rem 1.6rem;
+  }
+
+  .about-link-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-linkedin,
+  .btn-site-link {
+    justify-content: center;
+  }
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   * {

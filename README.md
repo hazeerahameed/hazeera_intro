@@ -75,6 +75,7 @@ You can host this website completely free with zero monthly fees or technical se
 ```
 Hazeera_Intro/
 ├── index.html          # Main HTML document with full content and semantics
+├── about.html          # Dedicated point-by-point About Me profile page
 ├── css/
 │   └── style.css       # Deep emerald, cream & gold styling, animations, responsiveness
 ├── js/
